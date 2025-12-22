@@ -44,6 +44,17 @@
             font-size: 1.2rem;
             margin-top: 10px;
             color: #888;
+            text-transform: lowercase;
+        }
+
+        /* Large Intro Statement */
+        .intro-statement {
+            margin: 80px 0 40px 0;
+            color: #fff;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            text-align: center;
+            font-weight: bold;
         }
 
         .section-title {
@@ -51,7 +62,7 @@
             text-transform: uppercase;
             letter-spacing: 4px;
             text-align: left;
-            margin: 120px auto 40px auto;
+            margin: 0 auto 40px auto; /* Removed top margin to close gap */
             max-width: 800px;
             border-bottom: 1px solid #333;
             padding-bottom: 20px;
@@ -62,19 +73,13 @@
             margin: 0 auto 100px auto;
         }
 
-        /* The Rule Boxes - Stagnant White Outline */
+        /* Rule Containers: Permanent White Outline */
         .rule-container {
             margin-bottom: 30px;
             padding: 40px;
-            border: 1px solid #fff; /* Fixed White Border */
+            border: 1px solid #fff; 
             text-align: left;
             background: transparent;
-            transition: box-shadow 0.3s ease;
-        }
-
-        /* Subtle Glow on hover instead of color inversion */
-        .rule-container:hover {
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
         .rule-container h3 {
@@ -86,7 +91,7 @@
         }
 
         .rule-container p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #ccc;
             line-height: 1.6;
             margin-bottom: 0;
@@ -115,16 +120,25 @@
             10% { opacity: 0.9; }
             100% { opacity: 1; }
         }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            .intro-statement { font-size: 1.4rem; }
+            .rule-container { padding: 20px; }
+        }
     </style>
 </head>
 <body>
     <div class="grain"></div>
 
     <div class="container">
-        <h1>REVERB</h1>
-        <p class="tagline">radical human connection</p>
+        <header>
+            <h1>REVERB</h1>
+            <p class="tagline">radical human connection</p>
+        </header>
 
-        <section style="margin: 80px 0; color: #888;">
+        <section class="intro-statement">
             <p>Dating & social apps completely altered the way we meet. Let's do it again.</p>
         </section>
 
@@ -152,9 +166,9 @@
             </div>
         </div>
 
-        <a href="mailto:your-email@example.com" class="cta-button">JOIN THE GUEST LIST</a>
+        <a href="mailto:info@reverberate.app" class="cta-button">JOIN THE GUEST LIST</a>
         
-        <p style="margin-top: 100px; color: #444; font-size: 0.8rem; letter-spacing: 1px;">
+        <p style="margin-top: 100px; color: #444; font-size: 0.8rem; letter-spacing: 2px;">
             RADICALLY HONEST. QUEER LED. SOBER FRIENDLY. NEURODIVERGENT SAFE.
         </p>
     </div>
