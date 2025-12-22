@@ -5,34 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVERB | Radical Human Connection</title>
     <style>
-        .section-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-align: left;
-    margin: 120px auto 40px auto; /* More space above to let it breathe */
-    max-width: 800px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 20px;
-}
-
-.manifesto-stack {
-    max-width: 800px;
-    margin: 0 auto 100px auto; /* Removed top margin since section-title handles it */
-}
-
-/* Subtle Hover Effect for the Rules */
-.rule-container {
-    margin-bottom: 60px;
-    padding: 20px 0;
-    border-bottom: 1px solid transparent;
-    transition: all 0.4s ease;
-}
-
-.rule-container:hover {
-    border-bottom: 1px solid #222; /* Very subtle line appears on hover */
-}
         body, html {
             margin: 0;
             padding: 0;
@@ -74,22 +46,50 @@
             color: #888;
         }
 
-        .manifesto {
-            text-align: center;
-            margin: 100px 0;
-            line-height: 1.6;
+        .section-title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: left;
+            margin: 120px auto 40px auto;
+            max-width: 800px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
         }
 
-        .rule-box {
-            border: 1px solid #fff;
+        .manifesto-stack {
+            max-width: 800px;
+            margin: 0 auto 100px auto;
+        }
+
+        /* The Rule Boxes - Stagnant White Outline */
+        .rule-container {
+            margin-bottom: 30px;
             padding: 40px;
-            margin: 50px 0;
-            transition: all 0.3s ease;
+            border: 1px solid #fff; /* Fixed White Border */
+            text-align: left;
+            background: transparent;
+            transition: box-shadow 0.3s ease;
         }
 
-        .rule-box:hover {
-            background: #fff;
-            color: #000;
+        /* Subtle Glow on hover instead of color inversion */
+        .rule-container:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .rule-container h3 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .rule-container p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
 
         .cta-button {
@@ -101,6 +101,7 @@
             font-weight: bold;
             margin-top: 50px;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .cta-button:hover {
@@ -123,36 +124,38 @@
         <h1>REVERB</h1>
         <p class="tagline">radical human connection</p>
 
-        <section class="manifesto">
+        <section style="margin: 80px 0; color: #888;">
             <p>Dating & social apps completely altered the way we meet. Let's do it again.</p>
         </section>
+
         <h2 class="section-title">Rules of the Room</h2>
         
-       <div class="manifesto-stack">
-    <div class="rule-container">
-        <h3>01. A virtual meet-cute, not a resumé</h3>
-        <p>Spend less time curating a perfect profile, and more time meeting with authenticity. Current photos and intentions, guaranteed.</p>
-    </div>
+        <div class="manifesto-stack">
+            <div class="rule-container">
+                <h3>01. A virtual meet-cute, not a resumé</h3>
+                <p>Spend less time curating a perfect profile, and more time meeting with authenticity. Current photos and intentions, guaranteed.</p>
+            </div>
 
-    <div class="rule-container">
-        <h3>02. Vibe-based matching</h3>
-        <p>You tell us what you're looking for, and we show you profiles of others looking for the same thing. You're free to explore, with no hidden profiles within your parameters.</p>
-    </div>
+            <div class="rule-container">
+                <h3>02. Vibe-based matching</h3>
+                <p>You tell us what you're looking for, and we show you profiles of others looking for the same thing. You're free to explore, with no hidden profiles within your parameters.</p>
+            </div>
 
-    <div class="rule-container">
-        <h3>03. This is not a subscription</h3>
-        <p>Your single cover-charge gives you access for 24 hours. No hidden paywalls. No bots. No tourists. Everyone in the room is invested. Find what you're looking for and get offline.</p>
-    </div>
+            <div class="rule-container">
+                <h3>03. This is not a subscription</h3>
+                <p>Your single cover-charge gives you access for 24 hours. No hidden paywalls. No bots. No tourists. Everyone in the room is invested. Find what you're looking for and get offline.</p>
+            </div>
 
-    <div class="rule-container">
-        <h3>04. Ephemeral by design</h3>
-        <p>Your presence in the room expires after 24 hours. No digital footprints, no stale profiles, and no "ghosts." If you’re here, you’re present. If you’re gone, you’re gone.</p>
+            <div class="rule-container">
+                <h3>04. Ephemeral by design</h3>
+                <p>Your presence in the room expires after 24 hours. No digital footprints, no stale profiles, and no "ghosts." If you’re here, you’re present. If you’re gone, you’re gone.</p>
+            </div>
         </div>
 
-        <a href="#" class="cta-button">JOIN THE GUEST LIST</a>
+        <a href="mailto:your-email@example.com" class="cta-button">JOIN THE GUEST LIST</a>
         
-        <p style="margin-top: 100px; color: #444; font-size: 0.8rem;">
-            Radically honest. Queer led. Sober friendly. Neurodivergent safe.
+        <p style="margin-top: 100px; color: #444; font-size: 0.8rem; letter-spacing: 1px;">
+            RADICALLY HONEST. QUEER LED. SOBER FRIENDLY. NEURODIVERGENT SAFE.
         </p>
     </div>
 </body>
