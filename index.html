@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERB | Radical Honesty</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: hidden;
+        }
+
+        /* The Film Grain Overlay */
+        .grain {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain_Texture.png');
+            opacity: 0.07;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            animation: flicker 2s infinite;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #888;
+        }
+
+        .manifesto {
+            text-align: left;
+            margin: 100px 0;
+            line-height: 1.6;
+            border-left: 1px solid #333;
+            padding-left: 20px;
+        }
+
+        .rule-box {
+            border: 1px solid #fff;
+            padding: 40px;
+            margin: 50px 0;
+            transition: all 0.3s ease;
+        }
+
+        .rule-box:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 40px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            5% { opacity: 0.5; }
+            10% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <div class="container">
+        <h1>REVERB</h1>
+        <p class="tagline">A sanctuary for the multitudes.</p>
+
+        <section class="manifesto">
+            <p>// THE PROBLEM: Swiping is shopping. Profiles are lies. Connection has become a chore.</p>
+            <p>// THE SOLUTION: A digital room with physical rules.</p>
+        </section>
+
+        <div class="rule-box">
+            <h2>$5 COVER</h2>
+            <p>No bots. No tourists. Everyone in the room is invested. Your $5 buys you 24 hours of presence. After that, you vanish.</p>
+        </div>
+
+        <div class="rule-box">
+            <h2>NO RESUMES</h2>
+            <p>Three timestamped photos from this month. One 60-character broadcast of intent. No filters, no fluff, no ghosts.</p>
+        </div>
+
+        <div class="rule-box">
+            <h2>SWIM THE WEB</h2>
+            <p>A fluid, spatial constellation of vibes. Follow the resonance, find your frequency, and then—leave. Put your phone away.</p>
+        </div>
+
+        <a href="#" class="cta-button">JOIN THE GUEST LIST</a>
+        
+        <p style="margin-top: 100px; color: #444; font-size: 0.8rem;">
+            Radically honest. Queer led. Sober friendly. Neurodivergent safe.
+        </p>
+    </div>
+</body>
+</html>
