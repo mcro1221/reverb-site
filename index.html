@@ -22,25 +22,48 @@
     margin: 0 auto 100px auto; /* Removed top margin since section-title handles it */
 }
 
-/* Subtle Hover Effect for the Rules */
 .rule-container {
-    margin-bottom: 60px;
-    padding: 20px 0;
-    border-bottom: 1px solid transparent;
-    transition: all 0.4s ease;
+    margin-bottom: 24px;
+    padding: 40px;
+    /* The static border state */
+    border: 1px solid #333; 
+    text-align: left;
+    background-color: transparent;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
 }
 
+/* The "Light Up" state */
 .rule-container:hover {
-    border-bottom: 1px solid #222; /* Very subtle line appears on hover */
+    border-color: #fff;
+    /* This adds a very slight outer glow to make the white 'pop' */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px); /* Subtle lift effect */
 }
-        body, html {
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: hidden;
-        }
+
+.rule-container h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    transition: letter-spacing 0.4s ease;
+}
+
+.rule-container p {
+    font-size: 1.05rem;
+    color: #888; 
+    line-height: 1.6;
+    margin-bottom: 0;
+    transition: color 0.4s ease;
+}
+
+.rule-container:hover p {
+    color: #ccc; /* Text gets brighter when the box lights up */
+}
 
         /* The Film Grain Overlay */
         .grain {
