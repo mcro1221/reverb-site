@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERB | OUR ETHOS</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            text-transform: uppercase;
+        }
+
+        .grain {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain_Texture.png');
+            opacity: 0.07;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        nav {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 20px;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: #fff; }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 10px;
+            margin-bottom: 40px;
+            border-left: 8px solid #fff;
+            padding-left: 20px;
+        }
+
+        .ethos-section {
+            margin-bottom: 60px;
+        }
+
+        .ethos-section h2 {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .ethos-section p {
+            font-size: 1.1rem;
+            color: #eee;
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            border: 1px solid #fff;
+            padding: 40px;
+            margin: 40px 0;
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 100px;
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="container">
+        <nav>
+            <a href="index.html">← BACK TO THE ROOM</a>
+        </nav>
+
+        <h1>ETHOS</h1>
+
+        <div class="ethos-section">
+            <h2>01. HUMANITY OVER HARVESTING</h2>
+            <p>WE REFUSE TO TREAT HUMAN CONNECTION AS A COMMODITY. WE DO NOT TRACK YOUR LOCATION WHEN YOU ARE NOT USING THE APP. WE DO NOT SELL YOUR PREFERENCES. WE ARE BUILDING A TOOL, NOT A TRAP.</p>
+        </div>
+
+        <div class="highlight-box">
+            "CONNECTION IS A RIGHT, NOT A REVENUE STREAM."
+        </div>
+
+        <div class="ethos-section">
+            <h2>02. THE NOIR PHILOSOPHY</h2>
+            <p>LIFE HAPPENS IN THE SHADOWS AND THE WHISPERS. BY REMOVING THE "PERFORMANCE" OF SOCIAL MEDIA—THE LIKES, THE PERMANENT GRIDS, THE STALE PROFILES—WE ALLOW ROOM FOR THE UNVARNISHED SELF TO EMERGE.</p>
+        </div>
+
+        <div class="ethos-section">
+            <h2>03. RADICAL INCLUSIVITY</h2>
+            <p>REVERB IS BUILT BY QUEER PEOPLE FOR EVERYONE WHO FEELS ALIENATED BY TRADITIONAL TECH. IF THE CURRENT SYSTEM WASN'T BUILT FOR YOU, REVERB WAS.</p>
+        </div>
+
+        <footer>
+            <p>REVERB VERSION 1.0 // NOIR OPERATING SYSTEM</p>
+        </footer>
+    </div>
+</body>
+</html>
