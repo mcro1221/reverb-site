@@ -5,55 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVERB | Radical Human Connection</title>
     <style>
-        /* Transparency Section Styling */
-.transparency-box {
-    max-width: 800px;
-    margin: 100px auto 50px auto;
-    padding: 40px;
-    border: 1px solid #fff;
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.05); /* Slight tint to distinguish it */
-}
-
-.transparency-box h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 0;
-    border-bottom: 1px solid #333;
-    padding-bottom: 15px;
-}
-
-.model-flow {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.flow-item {
-    flex: 1;
-}
-
-.flow-item h4 {
-    font-size: 0.9rem;
-    color: #fff;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.flow-item p {
-    font-size: 0.85rem;
-    color: #888;
-    line-height: 1.5;
-}
-
-/* Mobile fix for the flow columns */
-@media (max-width: 600px) {
-    .model-flow {
-        flex-direction: column;
-    }
-}
         body, html {
             margin: 0;
             padding: 0;
@@ -100,25 +51,26 @@
         .intro-statement {
             margin: 80px 0 40px 0;
             color: #fff;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             line-height: 1.4;
             text-align: center;
+            font-weight: bold;
         }
 
         .section-title {
             font-size: 1.8rem;
             text-transform: uppercase;
             letter-spacing: 4px;
-            text-align: center;
-            margin: 0 auto 40px auto; /* Removed top margin to close gap */
+            text-align: left;
+            margin: 0 auto 40px auto;
             max-width: 800px;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #fff; /* Brighter White Line */
             padding-bottom: 20px;
         }
 
         .manifesto-stack {
             max-width: 800px;
-            margin: 0 auto 100px auto;
+            margin: 0 auto 80px auto;
         }
 
         /* Rule Containers: Permanent White Outline */
@@ -145,95 +97,26 @@
             margin-bottom: 0;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 20px 40px;
+        /* Transparency Section */
+        .transparency-box {
+            max-width: 800px;
+            margin: 100px auto 60px auto;
+            padding: 40px;
             border: 1px solid #fff;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
-        .cta-button:hover {
-            background: #fff;
-            color: #000;
+        .transparency-box h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
         }
 
-        @keyframes flicker {
-            0% { opacity: 0.9; }
-            5% { opacity: 0.5; }
-            10% { opacity: 0.9; }
-            100% { opacity: 1; }
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            h1 { font-size: 3rem; }
-            .intro-statement { font-size: 1.4rem; }
-            .rule-container { padding: 20px; }
-        }
-    </style>
-</head>
-<body>
-    <div class="grain"></div>
-
-    <div class="container">
-        <header>
-            <h1>REVERB</h1>
-            <p class="tagline">radical human connection</p>
-        </header>
-
-        <section class="intro-statement">
-            <p>Dating & social apps completely altered the way we meet. Let's do it again.</p>
-            
-        </section>
-
-        <h2 class="section-title">Rules of the Room</h2>
-        
-        <div class="manifesto-stack">
-            <div class="rule-container">
-                <h3>01. Resonance, not resumés.</h3>
-                <p>Spend less time curating a perfect profile, and more time meeting with authenticity. Current photos and intentions, guaranteed.</p>
-            </div>
-
-            <div class="rule-container">
-                <h3>02. Vibe-based proximity.</h3>
-                <p>Stop signaling that you have it all figured out. This is about what you want, right now. We show you similar energies, but with zero gatekeeping and no hidden profiles.</p>
-            </div>
-
-       <div class="rule-container">
-           <h3>03. One Room. One Cover.</h3>
-           <p>Pay once, stay for the night. No recurring fees, no hidden paywalls, and no tourists. Everyone here is invested in being present. Find what piques your interest and get offline.</p>
-           </div>
-
-            <div class="rule-container">
-                <h3>04. Ephemeral by design</h3>
-                <p>Your presence in the room expires after 24 hours. No digital footprints, no stale chats, and no "ghosts."</p>
-            </div>
-        <div class="transparency-box">
-    <h2>The Economics of Care</h2>
-    <div class="model-flow">
-        <div class="flow-item">
-            <h4>01. Operations</h4>
-            <p>The first portion of every cover charge keeps the room running: servers, security, and maintenance. No profit, just infrastructure.</p>
-        </div>
-        <div class="flow-item">
-            <h4>02. Mutual Aid</h4>
-            <p>100% of surplus revenue is redistributed to fund gender-affirming care and survival funds for trans youth. We grow only as the community grows.</p>
-        </div>
-        <div class="flow-item">
-            <h4>03. Transparency</h4>
-            <p>We provide quarterly reports on exactly how much was raised and where it was sent. Radical honesty is our only business model.</p>
-    </div>
-</div>
-        <a href="mailto:info@reverberate.app" class="cta-button">JOIN THE GUEST LIST</a>
-        
-        <p style="margin-top: 100px; color: #eee; font-size: 0.9rem; letter-spacing: 2px;">
-            RADICALLY HONEST. QUEER LED. SOBER FRIENDLY. NEURODIVERGENT SAFE.
-        </p>
-    </div>
-</body>
-</html>
+        .model-flow {
+            display: flex;
+            justify-content: space-between
