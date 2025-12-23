@@ -3,86 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REVERB | RADICAL HUMAN CONNECTION</title>
+    <title>REVERB | Radical Human Connection</title>
     <style>
+        /* BASE STYLES */
         body, html {
-            margin: 0; padding: 0;
-            background-color: #000; color: #fff;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Forced Black */
+            color: #ffffff;
             font-family: 'Courier New', Courier, monospace;
-            overflow-x: hidden; min-height: 100vh;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
 
+        /* GRAIN OVERLAY */
         .grain {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            /* Using a fallback color in case image fails */
+            background-color: transparent; 
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain_Texture.png');
-            opacity: 0.07; pointer-events: none; z-index: 999;
+            opacity: 0.07;
+            pointer-events: none;
+            z-index: 999;
         }
 
+        /* LAYOUT CONTAINER */
         .container {
-            max-width: 800px; margin: 0 auto; padding: 100px 20px;
-            text-align: center; position: relative; z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Ensures content sits above background */
         }
 
+        /* TYPOGRAPHY */
         h1 {
-            font-size: 4rem;
-            letter-spacing: 15px; /* Widened letters */
-            padding-left: 15px; /* Keeps it centered */
+            font-size: 6rem;
+            letter-spacing: -1.2px;
             text-transform: uppercase;
             margin-bottom: 0;
+            color: #fff;
             animation: flicker 2s infinite;
         }
 
         .tagline {
-            font-size: 1.2rem; margin-top: 10px; color: #888;
-            text-transform: lowercase; letter-spacing: 2px;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #888;
+            text-transform: lowercase;
         }
 
         .intro-statement {
-            margin: 80px 0 40px 0; font-size: 1.8rem; line-height: 1.4;
-            font-weight: bold; text-transform: uppercase;
+            margin: 80px 0 40px 0;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1.4;
+            text-align: center;
+            font-weight: bold;
+        }
+            section-title {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center; /* Changed from left to center */
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+    border-bottom: 1px solid #fff; 
+    padding-bottom: 20px;
         }
 
-        .section-title {
-            font-size: 1.8rem; text-transform: uppercase; letter-spacing: 4px;
-            text-align: center; /* Centered */
-            margin: 0 auto 40px auto; max-width: 800px;
-            border-bottom: 1px solid #fff; padding-bottom: 20px;
+        /* MANIFESTO RULES STACK */
+        .manifesto-stack {
+            max-width: 800px;
+            margin: 0 auto 80px auto;
         }
-
-        .manifesto-stack { max-width: 800px; margin: 0 auto 80px auto; }
 
         .rule-container {
-            margin-bottom: 30px; padding: 40px; border: 1px solid #fff;
-            text-align: left; background: transparent;
+            margin-bottom: 30px;
+            padding: 40px;
+            border: 1px solid #ffffff; 
+            text-align: left;
+            background: transparent;
         }
 
         .rule-container h3 {
-            font-size: 1.3rem; text-transform: uppercase; letter-spacing: 2px;
-            margin-top: 0; margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #fff;
         }
 
         .rule-container p {
-            font-size: 1.1rem; color: #ccc; line-height: 1.6;
-            text-transform: uppercase; margin-bottom: 0;
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
 
+        /* ECONOMICS / TRANSPARENCY SECTION */
         .transparency-box {
-            max-width: 800px; margin: 60px auto; padding: 40px;
-            border: 1px solid #fff; text-align: left;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            border: 1px solid #ffffff;
+            text-align: left;
             background-color: rgba(255, 255, 255, 0.05);
         }
 
         .transparency-box h2 {
-            font-size: 1.5rem; text-transform: uppercase; letter-spacing: 3px;
-            margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 15px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+            color: #fff;
         }
 
-        .model-flow { display: flex; justify-content: space-between; gap: 30px; margin-top: 30px; }
-        .flow-item { flex: 1; }
-        .flow-item h4 { font-size: 1rem; margin-bottom: 12px; text-transform: uppercase; }
-        .flow-item p { font-size: 1.05rem; color: #ccc; line-height: 1.6; text-transform: uppercase; }
+        .model-flow {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 30px;
+        }
 
+        .flow-item {
+            flex: 1;
+        }
+
+        .flow-item h4 {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .flow-item p {
+            font-size: 1.05rem;
+            color: #ccc; 
+            line-height: 1.6;
+        }
+
+        /* BUTTON & FOOTER */
         .cta-button {
-            display: inline-block; padding: 20px 40px; border: 1px solid #fff;
-            color: #fff; text-decoration: none; font-weight: bold;
-            margin-top: 50px; transition: all 0
+            display: inline-block;
+            padding: 20px 40px;
+            border: 1px solid #ffffff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            5% { opacity: 0.5; }
+            10% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            .intro-statement { font-size: 1.4rem; }
+            .rule-container { padding: 20px; }
+            .transparency-box { padding: 20px; }
+            .model-flow { flex-direction: column; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <div class="container">
+        <header>
+            <h1>REVERB</h1>
+            <p class="tagline">radical human connection</p>
+        </header>
+        <section class="intro-statement">
+            <p>Dating & social media apps completely changed the way we meet. Let's do it again.</p>
+            
+        </section>
+
+        <h2 class="section-title">Rules of the Room</h2>
+        
+        <div class="manifesto-stack">
+            <div class="rule-container">
+                <h3>01. Resonance, not resumés.</h3>
+                <p>Spend less time curating a perfect profile, and more time meeting with authenticity. Current photos and intentions, guaranteed.</p>
+            </div>
+
+            <div class="rule-container">
+                <h3>02. Vibe-based proximity.</h3>
+                <p>Stop signaling that you have it all figured out. This is about what you want, right now. We show you similar energies, with zero gatekeeping and no hidden profiles.            </div>
+
+            <div class="rule-container">
+                <h3>03. One Room. One Cover.</h3>
+                <p>Pay once, stay for the night. No recurring fees, no hidden paywalls, and no tourists. Everyone here is invested in being present. Find your connection and get offline.</p>            </div>
+
+            <div class="rule-container">
+                <h3>04. Ephemeral by design</h3>
+                <p>Your presence in the room expires after 24 hours. No digital footprints, no stale profiles, and no "ghosts." If you’re here, you’re present. If you’re gone, you’re gone.</p>
+            </div>
+        </div>
+
+        <div class="transparency-box">
+            <h2>The Economics</h2>
+            <div class="model-flow">
+                <div class="flow-item">
+                    <h4>01. Operations</h4>
+                    <p>The first portion of every cover charge keeps the room running: servers, security, and maintenance.</p>
+                </div>
+                <div class="flow-item">
+                    <h4>02. Mutual Aid</h4>
+                    <p>100% of surplus revenue is redistributed to fund gender-affirming care for trans youth.</p>
+                </div>
+                <div class="flow-item">
+                    <h4>03. Transparency</h4>
+                    <p>We provide monthly reports on exactly how much was raised and where it was sent.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="mailto:info@reverberate.app" class="cta-button">JOIN THE GUEST LIST</a>
+        
+        <p style="margin-top: 100px; color: #bbb; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;">
+            Radically honest. Queer led. Sober friendly. Neurodivergent safe.
+        </p>
+    </div>
+</body>
+
+<a href="ethos.html" style="color: #fff; text-decoration: underline; font-size: 0.8rem; letter-spacing: 2px; display: block; margin-top: 20px;">
+    READ OUR FULL ETHOS
+</a>
+
+</html>
