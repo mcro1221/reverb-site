@@ -97,10 +97,10 @@
             margin-bottom: 0;
         }
 
-        /* Transparency Section */
+        /* Transparency Section Styling */
         .transparency-box {
             max-width: 800px;
-            margin: 100px auto 60px auto;
+            margin: 60px auto;
             padding: 40px;
             border: 1px solid #fff;
             text-align: left;
@@ -114,9 +114,126 @@
             margin-top: 0;
             border-bottom: 1px solid #333;
             padding-bottom: 15px;
-            margin-bottom: 30px;
         }
 
         .model-flow {
             display: flex;
-            justify-content: space-between
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .flow-item {
+            flex: 1;
+        }
+
+        .flow-item h4 {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .flow-item p {
+            font-size: 1.05rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 40px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            5% { opacity: 0.5; }
+            10% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            .intro-statement { font-size: 1.4rem; }
+            .rule-container { padding: 20px; }
+            .model-flow { flex-direction: column; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <div class="container">
+        <header>
+            <h1>REVERB</h1>
+            <p class="tagline">radical human connection</p>
+        </header>
+
+        <section class="intro-statement">
+            <p>Dating & social apps completely altered the way we meet. Let's do it again.</p>
+        </section>
+
+        <h2 class="section-title">Rules of the Room</h2>
+        
+        <div class="manifesto-stack">
+            <div class="rule-container">
+                <h3>01. A virtual meet-cute, not a resumé</h3>
+                <p>Spend less time curating a perfect profile, and more time meeting with authenticity. Current photos and intentions, guaranteed.</p>
+            </div>
+
+            <div class="rule-container">
+                <h3>02. Vibe-based matching</h3>
+                <p>Think of what you would whisper into someone’s ear at a bar. This is not a cover letter; it's a mood. No algorithms hiding people—if they're in the room, they're in your view.</p>
+            </div>
+
+            <div class="rule-container">
+                <h3>03. One Room. One Cover.</h3>
+                <p>Pay once, stay for the night. No subscriptions, no hidden paywalls, and no tourists. Everyone here paid the cover because they actually want to be present. Get in and get offline.</p>
+            </div>
+
+            <div class="rule-container">
+                <h3>04. Ephemeral by design</h3>
+                <p>Your presence in the room expires after 24 hours. No digital footprints, no stale profiles, and no "ghosts." If you’re here, you’re present. If you’re gone, you’re gone.</p>
+            </div>
+        </div>
+
+        <div class="transparency-box">
+            <h2>The Economics of Care</h2>
+            <div class="model-flow">
+                <div class="flow-item">
+                    <h4>01. Operations</h4>
+                    <p>The first portion of every cover charge keeps the room running: servers, security, and maintenance. No profit, just infrastructure.</p>
+                </div>
+                <div class="flow-item">
+                    <h4>02. Mutual Aid</h4>
+                    <p>100% of surplus revenue is redistributed to fund gender-affirming care and survival funds for trans youth. We grow only as the community grows.</p>
+                </div>
+                <div class="flow-item">
+                    <h4>03. Honesty</h4>
+                    <p>We provide monthly reports on exactly how much was raised and where it was sent. Radical honesty is our only business model.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="mailto:info@reverberate.app" class="cta-button">JOIN THE GUEST LIST</a>
+        
+        <p style="margin-top: 100px; color: #bbb; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;">
+            Radically honest. Queer led. Sober friendly. Neurodivergent safe.
+        </p>
+    </div>
+</body>
+</html>
