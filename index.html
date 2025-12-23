@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVERB | Radical Human Connection</title>
     <style>
+        /* Transparency Section Styling */
+.transparency-box {
+    max-width: 800px;
+    margin: 100px auto 50px auto;
+    padding: 40px;
+    border: 1px solid #fff;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.05); /* Slight tint to distinguish it */
+}
+
+.transparency-box h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.model-flow {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.flow-item {
+    flex: 1;
+}
+
+.flow-item h4 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.flow-item p {
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* Mobile fix for the flow columns */
+@media (max-width: 600px) {
+    .model-flow {
+        flex-direction: column;
+    }
+}
         body, html {
             margin: 0;
             padding: 0;
@@ -164,11 +213,25 @@
                 <h3>04. Ephemeral by design</h3>
                 <p>Your presence in the room expires after 24 hours. No digital footprints, no stale chats, and no "ghosts."</p>
             </div>
+        <div class="transparency-box">
+    <h2>The Economics of Care</h2>
+    <div class="model-flow">
+        <div class="flow-item">
+            <h4>01. Operations</h4>
+            <p>The first portion of every cover charge keeps the room running: servers, security, and maintenance. No profit, just infrastructure.</p>
         </div>
-
+        <div class="flow-item">
+            <h4>02. Mutual Aid</h4>
+            <p>100% of surplus revenue is redistributed to fund gender-affirming care and survival funds for trans youth. We grow only as the community grows.</p>
+        </div>
+        <div class="flow-item">
+            <h4>03. Transparency</h4>
+            <p>We provide quarterly reports on exactly how much was raised and where it was sent. Radical honesty is our only business model.</p>
+    </div>
+</div>
         <a href="mailto:info@reverberate.app" class="cta-button">JOIN THE GUEST LIST</a>
         
-        <p style="margin-top: 100px; color: #444; font-size: 0.8rem; letter-spacing: 2px;">
+        <p style="margin-top: 100px; color: #eee; font-size: 0.9rem; letter-spacing: 2px;">
             RADICALLY HONEST. QUEER LED. SOBER FRIENDLY. NEURODIVERGENT SAFE.
         </p>
     </div>
