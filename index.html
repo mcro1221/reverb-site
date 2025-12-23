@@ -4,32 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVERB | Radical Human Connection</title>
-<meta name="title" content="REVERB | RADICAL HUMAN CONNECTION">
-<meta name="description" content="A noir-inspired space for the unvarnished self. No algorithms. No surveillance. No corporate extraction.">
+    
+    <meta name="title" content="REVERB | RADICAL HUMAN CONNECTION">
+    <meta name="description" content="A noir-inspired space for the unvarnished self. No algorithms. No surveillance. No corporate extraction.">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://reverberate.app/"> <meta property="og:title" content="REVERB | RADICAL HUMAN CONNECTION">
-<meta property="og:description" content="Queer-led. Sober-friendly. Radical human connection. Get in and get offline.">
-<meta property="og:image" content="https://yourwebsite.com/social-preview.jpg"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reverberate.app/">
+    <meta property="og:title" content="REVERB | RADICAL HUMAN CONNECTION">
+    <meta property="og:description" content="Queer-led. Sober-friendly. Radical human connection. Get in and get offline.">
+    <meta property="og:image" content="https://yourwebsite.com/social-preview.jpg"> 
 
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://reverberate.app/">
-<meta property="twitter:title" content="REVERB | RADICAL HUMAN CONNECTION">
-<meta property="twitter:description" content="A noir-inspired space for the unvarnished self.">
-<meta property="twitter:image" content="https://yourwebsite.com/social-preview.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://reverberate.app/">
+    <meta property="twitter:title" content="REVERB | RADICAL HUMAN CONNECTION">
+    <meta property="twitter:description" content="A noir-inspired space for the unvarnished self.">
+    <meta property="twitter:image" content="https://yourwebsite.com/social-preview.jpg">
+
     <style>
-        .header-sub {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    color: #888; /* A subtle grey to contrast with the white text */
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    border-top: 1px solid #333; /* A thin "separator" line */
-    padding-top: 10px;
-    text-align: center;
-}
         /* BASE STYLES */
         body, html {
             margin: 0;
@@ -46,7 +37,6 @@
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            /* Using a fallback color in case image fails */
             background-color: transparent; 
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain_Texture.png');
             opacity: 0.07;
@@ -59,9 +49,9 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 100px 20px;
-            text-align: center;
+            text-align: center; /* Centers everything by default */
             position: relative;
-            z-index: 1; /* Ensures content sits above background */
+            z-index: 1;
         }
 
         /* TYPOGRAPHY */
@@ -82,26 +72,41 @@
         }
 
         .intro-statement {
-            margin: 80px 0 40px 0;
+            margin: 80px 0 10px 0; /* Reduced bottom margin to sit closer to sub-header */
             color: #fff;
             font-size: 1.5rem;
             line-height: 1.4;
             text-align: center;
             font-weight: bold;
         }
-        
+
+        .header-sub {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 20px;
+            margin-bottom: 80px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center; /* Explicit center */
+            display: inline-block; /* Keeps border width tight to text if desired, or block for full width */
+            width: 100%;
+        }
+       
         .section-title {
-        font-size: 2.1rem;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        text-align: center;
-        margin: 0 auto 40px auto;
-        max-width: 800px;
-        border-bottom: 1px solid #fff; 
-        padding-bottom: 20px;
+            font-size: 2.1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            margin: 0 auto 40px auto;
+            max-width: 800px;
+            border-bottom: 1px solid #fff; 
+            padding-bottom: 20px;
         }
 
-        /* MANIFESTO RULES STACK */
+        /* MANIFESTO RULES STACK (LEFT ALIGNED) */
         .manifesto-stack {
             max-width: 800px;
             margin: 0 auto 80px auto;
@@ -111,7 +116,7 @@
             margin-bottom: 30px;
             padding: 40px;
             border: 1px solid #ffffff; 
-            text-align: left;
+            text-align: left; /* EXPLICIT LEFT ALIGNMENT */
             background: transparent;
         }
 
@@ -131,13 +136,13 @@
             margin-bottom: 0;
         }
 
-        /* ECONOMICS / TRANSPARENCY SECTION */
+        /* ECONOMICS / TRANSPARENCY SECTION (CENTER ALIGNED) */
         .transparency-box {
             max-width: 800px;
             margin: 60px auto;
             padding: 40px;
             border: 1px solid #ffffff;
-            text-align: left;
+            text-align: center; /* Changed to Center */
             background-color: rgba(255, 255, 255, 0.05);
         }
 
@@ -149,17 +154,20 @@
             border-bottom: 1px solid #333;
             padding-bottom: 15px;
             color: #fff;
+            display: inline-block; /* Centers the border underline with the text */
+            margin-bottom: 30px;
         }
 
         .model-flow {
             display: flex;
             justify-content: space-between;
             gap: 30px;
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         .flow-item {
             flex: 1;
+            text-align: center; /* Ensure items are centered */
         }
 
         .flow-item h4 {
@@ -187,11 +195,36 @@
             margin-top: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            background: transparent;
+            width: 100%;
+            max-width: 400px;
         }
 
         .cta-button:hover {
             background: #ffffff;
             color: #000000;
+        }
+
+        .footer-link {
+            color: #888;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            display: block;
+            margin-top: 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-link:hover {
+            border-bottom: 1px solid #888;
         }
 
         @keyframes flicker {
@@ -212,19 +245,21 @@
     </style>
 </head>
 <body>
+
     <div class="grain"></div>
 
     <div class="container">
+        
         <header>
             <h1>REVERB</h1>
             <p class="tagline">radical human connection</p>
         </header>
-        <section class="intro-statement">
-            <p>Dating & social apps completely changed the way we connect Let's do it again.</p>
+
+        <div class="intro-statement">
+            <p>Dating & social apps completely changed the way we connect. Let's do it again.</p>
         </div>
+        
         <div class="header-sub">reverberate.app - a virtual space for the radical individual.</div>
-            
-        </section>
 
         <h2 class="section-title">Rules of the Room</h2>
         
@@ -236,11 +271,13 @@
 
             <div class="rule-container">
                 <h3>02. Vibe-based proximity.</h3>
-                <p>Stop signaling that you have it all figured out. This is about what you want, right now. We show you similar energies, with zero gatekeeping and no hidden profiles.            </div>
+                <p>Stop signaling that you have it all figured out. This is about what you want, right now. We show you similar energies, with zero gatekeeping and no hidden profiles.</p>
+            </div>
 
             <div class="rule-container">
                 <h3>03. One Room. One Cover.</h3>
-                <p>Pay once, stay for the night. No recurring fees, no hidden paywalls, and no tourists. Everyone here is invested in being present. Find your connection and get offline.</p>            </div>
+                <p>Pay once, stay for the night. No recurring fees, no hidden paywalls, and no tourists. Everyone here is invested in being present. Find your connection and get offline.</p>
+            </div>
 
             <div class="rule-container">
                 <h3>04. Ephemeral by design</h3>
@@ -266,17 +303,17 @@
             </div>
         </div>
 
-<a href="https://form.typeform.com/to/Mt2SBtsV" target="_blank" class="cta-button">JOIN THE GUEST LIST</a>
+        <a href="https://form.typeform.com/to/Mt2SBtsV" target="_blank" class="cta-button">JOIN THE GUEST LIST</a>
         
-        <p style="margin-top: 100px; color: #bbb; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;">
+        <a href="ethos.html" class="footer-link">READ OUR FULL ETHOS</a>
+
+        <p style="margin-top: 80px; color: #444; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;">
             Radically honest. Queer led. Sober friendly. Neurodivergent safe.
         </p>
+
     </div>
-<script src="//embed.typeform.com/next/embed.js"></script>
+
+    <script src="//embed.typeform.com/next/embed.js"></script>
+
 </body>
-
-<a href="ethos.html" style="color: #fff; font-size: 1rem; letter-spacing: 2px; display: block; margin-top: 20px;">
-    READ OUR FULL ETHOS</a>
-</a>
-
 </html>
