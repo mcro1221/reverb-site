@@ -5,38 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVERB | Radical Human Connection</title>
     <style>
+        /* BASE STYLES */
         body, html {
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
+            background-color: #000000; /* Forced Black */
+            color: #ffffff;
             font-family: 'Courier New', Courier, monospace;
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
-        /* The Film Grain Overlay */
+        /* GRAIN OVERLAY */
         .grain {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain_Texture.png');
+            /* Using a fallback color in case image fails */
+            background-color: transparent; 
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain_Texture.png');
             opacity: 0.07;
             pointer-events: none;
             z-index: 999;
         }
 
+        /* LAYOUT CONTAINER */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 100px 20px;
             text-align: center;
+            position: relative;
+            z-index: 1; /* Ensures content sits above background */
         }
 
+        /* TYPOGRAPHY */
         h1 {
             font-size: 4rem;
             letter-spacing: -2px;
             text-transform: uppercase;
             margin-bottom: 0;
+            color: #fff;
             animation: flicker 2s infinite;
         }
 
@@ -47,7 +56,6 @@
             text-transform: lowercase;
         }
 
-        /* Large Intro Statement */
         .intro-statement {
             margin: 80px 0 40px 0;
             color: #fff;
@@ -64,20 +72,20 @@
             text-align: left;
             margin: 0 auto 40px auto;
             max-width: 800px;
-            border-bottom: 1px solid #fff; /* Brighter White Line */
+            border-bottom: 1px solid #ffffff; /* Bright White Line */
             padding-bottom: 20px;
         }
 
+        /* MANIFESTO RULES STACK */
         .manifesto-stack {
             max-width: 800px;
             margin: 0 auto 80px auto;
         }
 
-        /* Rule Containers: Permanent White Outline */
         .rule-container {
             margin-bottom: 30px;
             padding: 40px;
-            border: 1px solid #fff; 
+            border: 1px solid #ffffff; 
             text-align: left;
             background: transparent;
         }
@@ -88,6 +96,7 @@
             letter-spacing: 2px;
             margin-top: 0;
             margin-bottom: 15px;
+            color: #fff;
         }
 
         .rule-container p {
@@ -97,12 +106,12 @@
             margin-bottom: 0;
         }
 
-        /* Transparency Section Styling */
+        /* ECONOMICS / TRANSPARENCY SECTION */
         .transparency-box {
             max-width: 800px;
             margin: 60px auto;
             padding: 40px;
-            border: 1px solid #fff;
+            border: 1px solid #ffffff;
             text-align: left;
             background-color: rgba(255, 255, 255, 0.05);
         }
@@ -114,6 +123,7 @@
             margin-top: 0;
             border-bottom: 1px solid #333;
             padding-bottom: 15px;
+            color: #fff;
         }
 
         .model-flow {
@@ -137,14 +147,15 @@
 
         .flow-item p {
             font-size: 1.05rem;
-            color: #ccc;
+            color: #ccc; 
             line-height: 1.6;
         }
 
+        /* BUTTON & FOOTER */
         .cta-button {
             display: inline-block;
             padding: 20px 40px;
-            border: 1px solid #fff;
+            border: 1px solid #ffffff;
             color: #fff;
             text-decoration: none;
             font-weight: bold;
@@ -154,8 +165,8 @@
         }
 
         .cta-button:hover {
-            background: #fff;
-            color: #000;
+            background: #ffffff;
+            color: #000000;
         }
 
         @keyframes flicker {
@@ -165,11 +176,12 @@
             100% { opacity: 1; }
         }
 
-        /* Mobile Adjustments */
+        /* MOBILE RESPONSIVENESS */
         @media (max-width: 600px) {
             h1 { font-size: 3rem; }
             .intro-statement { font-size: 1.4rem; }
             .rule-container { padding: 20px; }
+            .transparency-box { padding: 20px; }
             .model-flow { flex-direction: column; gap: 40px; }
         }
     </style>
