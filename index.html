@@ -25,6 +25,7 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             min-height: 100vh;
+            scroll-behavior: smooth;
         }
 
         h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
@@ -42,7 +43,6 @@
 
         /* BRUTALIST UI ELEMENTS */
         .radical-border { border: 2px solid white; box-shadow: 6px 6px 0px 0px rgba(255,255,255,0.2); }
-        .nav-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
         /* TYPOGRAPHY & ANIMATION */
         .flicker { animation: flicker 2s infinite; }
@@ -88,26 +88,29 @@
             text-transform: uppercase;
             cursor: pointer;
             text-align: center;
-            text-decoration: none;
+            transition: background 0.3s ease;
         }
+        
+        .accept-btn:hover { background: #a1a1aa; }
     </style>
 </head>
 <body>
 
     <div class="grain"></div>
 
-    <div class="bg-white text-black py-2 px-4 text-center text-[10px] md:text-xs font-bold tracking-widest uppercase sticky top-0 z-[100]">
+    <div class="bg-white text-black py-2 px-4 text-center text-[10px] md:text-xs font-bold tracking-widest uppercase sticky top-0 z-[100] border-b border-black">
         REVERB: Technology for Good
     </div>
 
     <section class="max-w-4xl mx-auto px-6 py-16 md:py-24 relative z-10">
         <div class="mb-12">
             <h1 class="text-5xl md:text-8xl font-bold uppercase tracking-tighter mb-6 leading-[0.85] flicker">
-                The Internet was supposed to set us free.<span class="italic text-zinc-500
-                  </p>
+                The Internet was supposed to <span class="italic text-zinc-500 underline">set us free.</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-zinc-400">Instead, it got sold to the highest bidder.</p>
         </div>
 
-        <div class="radical-border bg-zinc-900/50 p-8 md:p-12 mb-12 backdrop-blur-sm">
+        <div class="radical-border bg-zinc-900/40 p-8 md:p-12 mb-12 backdrop-blur-sm">
             <div class="space-y-6 text-lg md:text-xl leading-relaxed font-light">
                 <p>
                     Let’s be honest: the digital landscape is a mess. 
@@ -127,7 +130,7 @@
                     <strong class="bg-white text-black px-2 py-1 uppercase text-sm md:text-base">we are pushing in the completely opposite direction.</strong>
                 </p>
 
-                <hr class="border-t border-zinc-700 my-8">
+                <hr class="border-t border-zinc-800 my-8">
 
                 <p>
                     <strong>We are REVERB.</strong> A nonprofit building technology for good. 
@@ -142,14 +145,14 @@
         </div>
     </section>
 
-    <div class="container max-w-4xl mx-auto px-6 text-center pb-24">
+    <div class="max-w-4xl mx-auto px-6 text-center pb-24 relative z-10">
         
         <header class="mb-16">
             <h2 class="text-7xl md:text-9xl font-bold tracking-tighter uppercase mb-0">REVERB</h2>
             <p class="text-zinc-500 tracking-[0.3em] uppercase text-sm mt-2">radical human connection</p>
         </header>
 
-        <div class="text-2xl font-bold mb-4">
+        <div class="text-2xl font-bold mb-12">
             <p>Dating & social apps completely changed the way we connect. <br class="hidden md:block"> Let's do it again.</p>
         </div>
         
@@ -160,46 +163,46 @@
         <h2 class="text-3xl uppercase tracking-widest border-b border-white pb-6 mb-12">Rules of the Room</h2>
         
         <div class="grid gap-8 text-left mb-24">
-            <div class="border border-white p-10 hover:bg-white hover:text-black transition-all duration-500 group">
+            <div class="border border-white p-8 md:p-10 hover:bg-white hover:text-black transition-all duration-500 group">
                 <h3 class="text-xl font-bold uppercase mb-4 tracking-widest">01. Resonance, not resumés.</h3>
-                <p class="text-zinc-400 group-hover:text-black transition-colors">Spend less time curating a perfect profile, and more time meeting with authenticity. Current photos and intentions, guaranteed.</p>
+                <p class="text-zinc-400 group-hover:text-black transition-colors">Spend less time curating a perfect profile, and more time meeting with authenticity.</p>
             </div>
 
-            <div class="border border-white p-10 hover:bg-white hover:text-black transition-all duration-500 group">
+            <div class="border border-white p-8 md:p-10 hover:bg-white hover:text-black transition-all duration-500 group">
                 <h3 class="text-xl font-bold uppercase mb-4 tracking-widest">02. Vibe-based proximity.</h3>
-                <p class="text-zinc-400 group-hover:text-black transition-colors">Stop signaling that you have it all figured out. This is about what you want, right now. We show you similar energies, zero gatekeeping.</p>
+                <p class="text-zinc-400 group-hover:text-black transition-colors">Stop signaling that you have it all figured out. This is about what you want, right now. No gatekeeping.</p>
             </div>
 
-            <div class="border border-white p-10 hover:bg-white hover:text-black transition-all duration-500 group">
+            <div class="border border-white p-8 md:p-10 hover:bg-white hover:text-black transition-all duration-500 group">
                 <h3 class="text-xl font-bold uppercase mb-4 tracking-widest">03. One Room. One Cover.</h3>
-                <p class="text-zinc-400 group-hover:text-black transition-colors">Pay once, stay for the night. No recurring fees, no paywalls. Everyone here is invested in being present. Find your connection and get offline.</p>
+                <p class="text-zinc-400 group-hover:text-black transition-colors">Pay once, stay for the night. No recurring fees, no paywalls. Everyone here is invested in being present.</p>
             </div>
 
-            <div class="border border-white p-10 hover:bg-white hover:text-black transition-all duration-500 group">
+            <div class="border border-white p-8 md:p-10 hover:bg-white hover:text-black transition-all duration-500 group">
                 <h3 class="text-xl font-bold uppercase mb-4 tracking-widest">04. Ephemeral by design.</h3>
-                <p class="text-zinc-400 group-hover:text-black transition-colors">Your presence expires after 24 hours. No digital footprints, no stale profiles. If you’re here, you’re present. If you’re gone, you’re gone.</p>
+                <p class="text-zinc-400 group-hover:text-black transition-colors">Your presence expires after 24 hours. No digital footprints, no stale profiles. If you’re here, you’re present.</p>
             </div>
         </div>
 
-        <div class="border border-white bg-zinc-900/30 p-12 text-center mb-20">
+        <div class="border border-white bg-zinc-900/20 p-8 md:p-12 text-center mb-20">
             <h2 class="text-2xl uppercase tracking-widest mb-10 border-b border-zinc-800 pb-4 inline-block">The Economics</h2>
             <div class="grid md:grid-cols-3 gap-12 text-sm uppercase tracking-wider">
                 <div>
-                    <h4 class="text-white mb-4">01. Operations</h4>
+                    <h4 class="text-white mb-4 font-bold">01. Operations</h4>
                     <p class="text-zinc-500">Servers, security, and maintenance to keep the room running.</p>
                 </div>
                 <div>
-                    <h4 class="text-white mb-4">02. Mutual Aid</h4>
+                    <h4 class="text-white mb-4 font-bold">02. Mutual Aid</h4>
                     <p class="text-zinc-500">100% of surplus revenue redistributed to fund gender-affirming care.</p>
                 </div>
                 <div>
-                    <h4 class="text-white mb-4">03. Transparency</h4>
+                    <h4 class="text-white mb-4 font-bold">03. Transparency</h4>
                     <p class="text-zinc-500">Monthly reports on exactly how much was raised and where it was sent.</p>
                 </div>
             </div>
         </div>
 
-        <button onclick="openManifesto()" class="accept-btn max-w-md mx-auto hover:bg-zinc-400 transition-colors">JOIN THE GUEST LIST</button>
+        <button onclick="openManifesto()" class="accept-btn max-w-md mx-auto">JOIN THE GUEST LIST</button>
         
         <p class="mt-20 text-zinc-600 text-[10px] uppercase tracking-[0.3em] font-bold">
             Radically honest. Queer led. Sober friendly. Neurodivergent safe.
@@ -213,12 +216,12 @@
             <h2 class="text-2xl font-bold uppercase tracking-widest border-b border-zinc-800 pb-4 mb-6">The Room Protocol</h2>
             <p class="text-zinc-400 text-sm mb-6">Before you enter, you must acknowledge our architecture:</p>
             <ul class="text-left text-sm space-y-4 text-zinc-300">
-                <li><strong>Hybrid Model:</strong> We are a PBC governed by a nonprofit mandate. No dirty VC money.</li>
+                <li><strong>Hybrid Model:</strong> We are a PBC governed by a nonprofit mandate. No VC money.</li>
                 <li><strong>Sovereignty:</strong> Your data is never sold. Your presence is ephemeral (24hrs).</li>
                 <li><strong>Mutual Aid:</strong> Surplus revenue funds gender-affirming care for trans youth.</li>
             </ul>
             <p class="italic text-[10px] text-zinc-600 mt-8">
-                By proceeding, you agree to our full Manifesto and hold the founders harmless during this pre-launch phase.
+                By proceeding, you agree to our full Manifesto and hold the founders harmless.
             </p>
             <a href="https://form.typeform.com/to/Mt2SBtsV" target="_blank" class="accept-btn" onclick="closeManifesto()">I ACCEPT. ENTER THE ROOM.</a>
         </div>
