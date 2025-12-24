@@ -19,7 +19,103 @@
     <meta property="twitter:title" content="REVERB | RADICAL HUMAN CONNECTION">
     <meta property="twitter:description" content="A noir-inspired space for the unvarnished self.">
     <meta property="twitter:image" content="https://yourwebsite.com/social-preview.jpg">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .radical-border { border: 3px solid black; box-shadow: 6px 6px 0px 0px #000; }
+        .radical-border-sm { border: 2px solid black; box-shadow: 4px 4px 0px 0px #000; }
+        .nav-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900">
 
+    <div class="bg-black text-white py-2 px-4 text-center text-sm font-bold tracking-widest uppercase border-b-2 border-black">
+        REVERB: A Nonprofit Mission for Technology for Good
+    </div>
+
+    <nav class="border-b-4 border-black bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-bold tracking-tighter uppercase italic">
+                REVERB<span class="text-red-600">.</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-bold uppercase text-sm tracking-tight">
+                <a href="#mission" class="nav-link">Mission</a>
+                <a href="https://reverberate.app" class="nav-link text-red-600">Reverberate.app</a>
+                <a href="#ethos" class="nav-link">Our Ethos</a>
+            </div>
+            <a href="https://reverberate.app" class="radical-border-sm bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-red-600 transition-colors">
+                Launch App
+            </a>
+        </div>
+    </nav>
+
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <div id="mission" class="mb-12">
+            <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-6 leading-[0.9]">
+                The Internet was <span class="text-red-600 italic">supposed</span> to set us free.
+            </h1>
+            <p class="text-xl md:text-2xl leading-relaxed font-medium text-zinc-700">
+                Instead, it got sold to the highest bidder.
+            </p>
+        </div>
+
+        <div id="ethos" class="radical-border bg-white p-8 md:p-12 mb-12">
+            <div class="space-y-6 text-lg md:text-xl leading-relaxed">
+                <p>
+                    Let’s be honest: the current digital landscape is a mess. 
+                    <span class="font-bold">Meta?</span> Zuck, ew. 
+                    <span class="font-bold">X?</span> Please. 
+                </p>
+
+                <p>
+                    And don't get us started on the "connection" apps. 
+                    <span class="italic text-zinc-400 underline decoration-zinc-300">Hinge</span> is a graveyard of stale chats and Instagram promos. 
+                    <span class="italic text-zinc-400 underline decoration-zinc-300">Grindr</span> is terrifying. 
+                    <span class="italic text-zinc-400 underline decoration-zinc-300">Tinder</span> is ancient history. 
+                    Even <span class="italic text-zinc-400 underline decoration-zinc-300">Feeld</span> might be okay... if it didn't crash every time you opened it.
+                </p>
+
+                <p>
+                    While the rest of the tech world is drowning in VC funding, building creepier algorithms, and harvesting your data, 
+                    <strong class="bg-black text-white px-2">we are pushing hard in the completely opposite direction.</strong>
+                </p>
+
+                <hr class="border-t-2 border-black my-8">
+
+                <p>
+                    <strong>We are REVERB.</strong> A nonprofit on a mission to reclaim technology for good. 
+                    Everything under our brand is built with a single ethos: <span class="font-bold italic">Decentralization over profit.</span>
+                </p>
+
+                <p>
+                    We built <a href="https://reverberate.app" class="underline font-bold hover:text-red-600 transition-colors">reverberate.app</a> 
+                    as a radical virtual space for the modern connection.
+                </p>
+                
+                <p class="text-2xl font-bold uppercase tracking-tight pt-4">
+                    We’re putting our money where our mouth is. <br class="hidden md:block">
+                    It’s time you did, too.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-6">
+            <a href="https://reverberate.app" class="radical-border bg-black text-white px-8 py-5 font-bold uppercase text-lg hover:bg-red-600 hover:translate-x-1 hover:translate-y-1 transition-all">
+                Enter Reverberate.app
+            </a>
+            <div class="flex flex-col justify-center">
+                <span class="text-xs font-bold uppercase text-zinc-400">Powered by</span>
+                <span class="text-lg font-bold uppercase tracking-widest">REVERB NONPROFIT</span>
+            </div>
+        </div>
+    </section>
     <style>
         /* BASE STYLES */
         body, html {
