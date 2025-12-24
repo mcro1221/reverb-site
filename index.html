@@ -43,6 +43,7 @@
             pointer-events: none;
             z-index: 999;
         }
+
         /* MODAL STYLES */
         .modal-overlay {
             display: none; /* Hidden by default */
@@ -73,6 +74,7 @@
             letter-spacing: 3px;
             border-bottom: 1px solid #333;
             padding-bottom: 15px;
+            margin-top: 0;
         }
 
         .modal-content p, .modal-content li {
@@ -95,6 +97,7 @@
             cursor: pointer;
             text-align: center;
             text-decoration: none;
+            box-sizing: border-box;
         }
 
         .accept-btn:hover {
@@ -151,7 +154,7 @@
             display: inline-block; /* Keeps border width tight to text if desired, or block for full width */
             width: 100%;
         }
-       
+        
         .section-title {
             font-size: 2.1rem;
             text-transform: uppercase;
@@ -362,49 +365,49 @@
         </div>
 
         <button onclick="openManifesto()" class="cta-button">JOIN THE GUEST LIST</button>    
-        <a href="https://form.typeform.com/to/Mt2SBtsV" target="_blank" class="accept-btn" onclick="closeManifesto()">I ACCEPT. ENTER THE ROOM.</a>
-    </div>
-</div>
-    <div id="manifestoModal" class="modal-overlay">
-    <div class="modal-content">
-        <h2>The Room Protocol</h2>
-        <p>Before you enter, you must acknowledge our architecture:</p>
-        <ul>
-            <li><strong>Hybrid Model:</strong> We are a PBC governed by a nonprofit mandate. No dirty VC money.</li>
-            <li><strong>Sovereignty:</strong> Your data is never sold. Your presence is ephemeral (24hrs).</li>
-            <li><strong>Mutual Aid:</strong> Surplus revenue funds gender-affirming care for trans youth.</li>
-        </ul>
-        <p style="font-style: italic; font-size: 0.8rem; color: #666;">
-            By proceeding, you agree to our full Manifesto and hold the founders harmless during this pre-launch phase.
-        </p>
-        <a href="ethos.html" class="footer-link">READ OUR FULL ETHOS</a>
-
+        
         <p style="margin-top: 80px; color: #444; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;">
             Radically honest. Queer led. Sober friendly. Neurodivergent safe.
         </p>
 
         <a href="manifesto.html" class="footer-link">READ OUR FULL MANIFESTO</a>
 
+    </div> <div id="manifestoModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>The Room Protocol</h2>
+            <p>Before you enter, you must acknowledge our architecture:</p>
+            <ul>
+                <li><strong>Hybrid Model:</strong> We are a PBC governed by a nonprofit mandate. No dirty VC money.</li>
+                <li><strong>Sovereignty:</strong> Your data is never sold. Your presence is ephemeral (24hrs).</li>
+                <li><strong>Mutual Aid:</strong> Surplus revenue funds gender-affirming care for trans youth.</li>
+            </ul>
+            <p style="font-style: italic; font-size: 0.8rem; color: #666; margin-top: 20px;">
+                By proceeding, you agree to our full Manifesto and hold the founders harmless during this pre-launch phase.
+            </p>
+            
+            <a href="https://form.typeform.com/to/Mt2SBtsV" target="_blank" class="accept-btn" onclick="closeManifesto()">I ACCEPT. ENTER THE ROOM.</a>
+        </div>
     </div>
 
-    <script src="//embed.typeform.com/next/embed.js"></script>
-function openManifesto() {
-    document.getElementById('manifestoModal').style.display = 'flex';
-    // Prevent background scrolling while modal is open
-    document.body.style.overflow = 'hidden';
-}
+    <script>
+        function openManifesto() {
+            document.getElementById('manifestoModal').style.display = 'flex';
+            // Prevent background scrolling while modal is open
+            document.body.style.overflow = 'hidden';
+        }
 
-function closeManifesto() {
-    document.getElementById('manifestoModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
+        function closeManifesto() {
+            document.getElementById('manifestoModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
 
-// Close modal if user clicks outside of the white box
-window.onclick = function(event) {
-    let modal = document.getElementById('manifestoModal');
-    if (event.target == modal) {
-        closeManifesto();
-    }
-}
+        // Close modal if user clicks outside of the white box
+        window.onclick = function(event) {
+            let modal = document.getElementById('manifestoModal');
+            if (event.target == modal) {
+                closeManifesto();
+            }
+        }
+    </script>
 </body>
 </html>
